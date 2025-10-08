@@ -37,19 +37,20 @@ export default function DetailView() {
     return ("" + p).replace("http:", "https:") + "." + e;
   }, [data]);
 
-  const navIds = orderedIds || [];
+  // Moved navIds inside the useMemo so deps are stable.
   const around = useMemo(() => {
+    const navIds = orderedIds ?? [];
     const i = navIds.indexOf(cid);
     if (i > -1) {
-      const a = navIds[i - 1];
-      const b = navIds[i + 1];
+      const prevCandidate = navIds[i - 1];
+      const nextCandidate = navIds[i + 1];
       return {
-        prev: (typeof a !== "undefined" ? a : (navIds[0] || Math.max(1, cid - 1))) as number,
-        next: (typeof b !== "undefined" ? b : (navIds.at && navIds.at(-1) ? navIds.at(-1) : cid + 1)) as number,
+        prev: typeof prevCandidate !== "undefined" ? prevCandidate : (navIds[0] || Math.max(1, cid - 1)),
+        next: typeof nextCandidate !== "undefined" ? nextCandidate : ((navIds as any).at?.(-1) ?? cid + 1),
       };
     }
     return { prev: Math.max(1, cid - 1), next: cid + 1 };
-  }, [navIds, cid]);
+  }, [orderedIds, cid]);
 
   if (loading) return (<><LoadingBar loading={true} /></>);
   if (error || !data) return (<section className={styles.detail}><p className={styles.status}>{error ?? "Not found."}</p></section>);
