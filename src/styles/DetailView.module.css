@@ -1,0 +1,9 @@
+.detail{ display:grid; grid-template-columns: 1fr 1fr; gap:1.2rem; align-items:start }
+.media{ background:#0f1117; border:1px solid #1f2330; border-radius:20px; padding:1rem; display:flex; align-items:center; justify-content:center; min-height:360px }
+.info{ display:flex; flex-direction:column; gap:.8rem }
+.desc{ color:#d2d2d2 }
+.meta{ list-style:none; padding:0; margin:0; display:grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap:.5rem }
+.stats ul{ list-style:none; padding:0; margin:0; display:grid; gap:.25rem }
+.stats li{ background:#0f1117; border:1px solid #1f2330; border-radius:12px; padding:.5rem .8rem }
+.navBtns{ display:flex; gap:.6rem; margin-top:.5rem }
+.status{ color:var(--muted) }

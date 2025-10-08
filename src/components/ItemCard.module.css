@@ -1,0 +1,6 @@
+.card{ display:block; background:#0f1117; border:1px solid #1f2330; border-radius:16px; padding:.8rem; transition:transform .15s ease, box-shadow .15s ease }
+.card:hover{ transform:translateY(-2px); box-shadow:0 6px 24px rgba(0,0,0,.35) }
+.placeholder{ width:100%; aspect-ratio:1/1; background:#1a1c22; border-radius:12px }
+.meta{ display:flex; align-items:center; justify-content:space-between; margin-top:.4rem }
+.id{ color:#9aa0a6; font-variant-numeric: tabular-nums }
+.name{ margin:0; font-size:1rem }

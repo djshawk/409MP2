@@ -1,0 +1,5 @@
+.wrap{ display:grid; grid-template-columns: 260px 1fr; gap:1.2rem }
+.filters{ position:sticky; top:68px; align-self:start; background:#0f1117; padding:1rem; border:1px solid #1f2330; border-radius:16px }
+.filterItem{ display:flex; gap:.5rem; align-items:center; margin:.25rem 0 }
+.grid{ display:grid; grid-template-columns: repeat(auto-fill, minmax(160px,1fr)); gap:1rem }
+.status{ color:var(--muted) }

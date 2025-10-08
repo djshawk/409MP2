@@ -1,0 +1,8 @@
+:root{ --bg:#0b0c10; --card:#121317; --text:#e6e6e6; --muted:#9aa0a6; --accent:#7dd3fc; }
+*{ box-sizing:border-box }
+html,body,#root{ height:100% }
+body{ margin:0; background:var(--bg); color:var(--text); font:16px/1.5 system-ui,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif }
+a{ color:var(--accent); text-decoration:none }
+img{ max-width:100%; display:block }
+button, input, select{ background:#1a1c22; color:var(--text); border:1px solid #2a2d36; border-radius:12px; padding:.6rem .8rem }
+button{ cursor:pointer }
