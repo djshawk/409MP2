@@ -5,10 +5,6 @@ import LoadingBar from "../components/LoadingBar"
 import { useSelection } from "../context/SelectionContext"
 import styles from "../styles/GalleryView.module.css"
 
-type Summary = {
-  id: number; name: string; thumbnailUrl: string;
-  comicsAvailable: number; seriesAvailable: number; eventsAvailable: number;
-}
 
 export default function GalleryView(){
   const [characters, setCharacters] = useState<any[]>([])
